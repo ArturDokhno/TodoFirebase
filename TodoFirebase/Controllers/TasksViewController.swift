@@ -6,23 +6,29 @@
 //
 
 import UIKit
+import Firebase
 
-class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class TasksViewController: UIViewController,
+                           UITableViewDelegate,
+                           UITableViewDataSource {
+    
     @IBOutlet var tavleView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",
+                                                 for: indexPath)
+        
         cell.backgroundColor = .clear
         cell.textLabel?.text = "This is cell number \(indexPath.row)"
         cell.textLabel?.textColor = .white
@@ -32,6 +38,15 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func addTapped(_ sender: Any) {
         
+    }
+    
+    @IBAction func signOutTapped(_ sender: Any) {
+        do {
+         try FirebaseAuth.Auth.auth().signOut()
+        } catch {
+            print(error.localizedDescription)
+        }
+        dismiss(animated: true)
     }
     
 }
