@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750A6B6B27FAF54000E243E9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6B6A27FAF54000E243E9 /* Task.swift */; };
+		750A6B6D27FAF56200E243E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A6B6C27FAF56200E243E9 /* User.swift */; };
 		751A515927F890CF00CECDE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 751A515827F890CF00CECDE6 /* GoogleService-Info.plist */; };
 		751A515C27F892C100CECDE6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 751A515B27F892C100CECDE6 /* FirebaseAuth */; };
 		751A515E27F892C100CECDE6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 751A515D27F892C100CECDE6 /* FirebaseDatabase */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		750A6B6A27FAF54000E243E9 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		750A6B6C27FAF56200E243E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		751A515827F890CF00CECDE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7545A50C27F841600042F494 /* TodoFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7545A50F27F841600042F494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		750A6B6E27FAF56D00E243E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				750A6B6A27FAF54000E243E9 /* Task.swift */,
+				750A6B6C27FAF56200E243E9 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		751A515627F890AD00CECDE6 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				751A515627F890AD00CECDE6 /* Supports */,
+				750A6B6E27FAF56D00E243E9 /* Models */,
 				751A515727F890BE00CECDE6 /* Controllers */,
 				7545A51D27F841610042F494 /* Info.plist */,
 				751A515827F890CF00CECDE6 /* GoogleService-Info.plist */,
@@ -174,6 +188,8 @@
 			files = (
 				7545A51427F841600042F494 /* LoginViewController.swift in Sources */,
 				754B35DB27F8578A00F34B19 /* TasksViewController.swift in Sources */,
+				750A6B6D27FAF56200E243E9 /* User.swift in Sources */,
+				750A6B6B27FAF54000E243E9 /* Task.swift in Sources */,
 				7545A51027F841600042F494 /* AppDelegate.swift in Sources */,
 				7545A51227F841600042F494 /* SceneDelegate.swift in Sources */,
 			);
